@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center" >
+
+    <ImageView
+        android:id="@+id/imagebutton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/download_circle" />
+
+    <com.example.customdownloadindicator.CustomDownloadIndicator
+        android:id="@+id/custom_loader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imagebutton"
+        android:layout_alignLeft="@id/imagebutton"
+        android:layout_alignRight="@id/imagebutton"
+        android:layout_alignTop="@id/imagebutton"
+        android:layout_centerInParent="true" />
+
+    <ImageView
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/imagebutton"
+        android:layout_alignRight="@id/imagebutton"
+        android:layout_alignTop="@id/imagebutton"
+        android:layout_centerInParent="true"
+        android:background="@drawable/download_empty_circle" />
+
+    <TextView
+        android:id="@+id/percents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/imagebutton"
+        android:layout_alignRight="@+id/imagebutton"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textColor="@android:color/white"
+        android:textStyle="bold" >
+    </TextView>
+
+    <Button
+        android:id="@+id/update_percents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Update Percents" />
+
+</RelativeLayout>

@@ -1,0 +1,4 @@
+<factorypath>
+    <factorypathentry kind="WKSPJAR" id="/ORMtesting/libs/ormlite-android-4.48.jar" enabled="true" runInBatchMode="false"/>
+    <factorypathentry kind="WKSPJAR" id="/ORMtesting/libs/ormlite-core-4.48.jar" enabled="true" runInBatchMode="false"/>
+</factorypath>

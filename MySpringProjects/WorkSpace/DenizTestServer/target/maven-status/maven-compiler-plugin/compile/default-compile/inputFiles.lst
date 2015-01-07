@@ -1,4 +1,10 @@
-/home/deniz/Server/WorkSpace/DenizTestServer/src/com/deniz/server/StudentNameEditor.java
-/home/deniz/Server/WorkSpace/DenizTestServer/src/com/deniz/server/Address.java
-/home/deniz/Server/WorkSpace/DenizTestServer/src/com/deniz/server/DenizHelloWorld.java
-/home/deniz/Server/WorkSpace/DenizTestServer/src/com/deniz/server/Student.java
+/home/deniz/MyGitRepos/MyAndroidLibraries/MySpringProjects/WorkSpace/DenizTestServer/src/com/deniz/server/PhoneNumberValidator.java
+/home/deniz/MyGitRepos/MyAndroidLibraries/MySpringProjects/WorkSpace/DenizTestServer/src/com/deniz/server/IsValidePhoneNumber.java
+/home/deniz/MyGitRepos/MyAndroidLibraries/MySpringProjects/WorkSpace/DenizTestServer/src/com/deniz/server/controller/EmpRestURIConstants.java
+/home/deniz/MyGitRepos/MyAndroidLibraries/MySpringProjects/WorkSpace/DenizTestServer/src/com/deniz/server/json/Employee.java
+/home/deniz/MyGitRepos/MyAndroidLibraries/MySpringProjects/WorkSpace/DenizTestServer/src/com/deniz/server/Student.java
+/home/deniz/MyGitRepos/MyAndroidLibraries/MySpringProjects/WorkSpace/DenizTestServer/src/com/deniz/server/DenizHelloWorld.java
+/home/deniz/MyGitRepos/MyAndroidLibraries/MySpringProjects/WorkSpace/DenizTestServer/src/com/deniz/server/Address.java
+/home/deniz/MyGitRepos/MyAndroidLibraries/MySpringProjects/WorkSpace/DenizTestServer/src/com/deniz/server/StudentNameEditor.java
+/home/deniz/MyGitRepos/MyAndroidLibraries/MySpringProjects/WorkSpace/DenizTestServer/src/com/deniz/server/IsValidHobby.java
+/home/deniz/MyGitRepos/MyAndroidLibraries/MySpringProjects/WorkSpace/DenizTestServer/src/com/deniz/server/HobbyValidator.java

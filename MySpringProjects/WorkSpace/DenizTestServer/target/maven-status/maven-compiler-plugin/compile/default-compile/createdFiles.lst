@@ -1,4 +1,8 @@
 com/deniz/server/StudentNameEditor.class
+com/deniz/server/PhoneNumberValidator.class
+com/deniz/server/HobbyValidator.class
 com/deniz/server/Student.class
+com/deniz/server/IsValidePhoneNumber.class
 com/deniz/server/Address.class
 com/deniz/server/DenizHelloWorld.class
+com/deniz/server/IsValidHobby.class

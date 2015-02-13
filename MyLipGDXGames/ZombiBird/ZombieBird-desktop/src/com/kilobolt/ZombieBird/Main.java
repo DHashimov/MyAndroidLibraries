@@ -2,6 +2,7 @@ package com.kilobolt.ZombieBird;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
+import com.dcorp.ZombieBird.ZBGame;
 
 public class Main {
 	public static void main(String[] args) {

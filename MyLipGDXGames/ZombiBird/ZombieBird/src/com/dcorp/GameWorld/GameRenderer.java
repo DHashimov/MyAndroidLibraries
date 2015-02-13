@@ -16,6 +16,7 @@ import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer;
 import com.badlogic.gdx.graphics.glutils.ShapeRenderer.ShapeType;
 import com.dcorp.GameObjects.Bird;
+import com.dcorp.GameObjects.Candys;
 import com.dcorp.GameObjects.Grass;
 import com.dcorp.GameObjects.Pipe;
 import com.dcorp.GameObjects.ScrollHandler;
@@ -40,12 +41,15 @@ public class GameRenderer {
 	private ScrollHandler scroller;
 	private Grass frontGrass, backGrass;
 	private Pipe pipe1;
-//	private Pipe pipe2;
+	private Candys candy1;
+	private Candys candy2;
+	// private Pipe pipe2;
 	private Pipe pipe3;
 
 	// Game Assets
 	private TextureRegion bg, grass, birdMid, skullUp, skullDown, bar, ready,
-			zbLogo, gameOver, highScore, scoreboard, star, noStar, retry;
+			zbLogo, gameOver, highScore, scoreboard, star, noStar, retry,
+			firstCandy, secondCandy;
 	private Animation birdAnimation;
 
 	// Tween stuff
@@ -84,7 +88,9 @@ public class GameRenderer {
 		frontGrass = scroller.getFrontGrass();
 		backGrass = scroller.getBackGrass();
 		pipe1 = scroller.getPipe1();
-//		pipe2 = scroller.getPipe2();
+		candy1 = scroller.getCandy();
+		candy2 = scroller.getCandy2();
+		// pipe2 = scroller.getPipe2();
 		pipe3 = scroller.getPipe3();
 	}
 
@@ -99,6 +105,8 @@ public class GameRenderer {
 		ready = AssetLoader.ready;
 		zbLogo = AssetLoader.zbLogo;
 		gameOver = AssetLoader.gameOver;
+		firstCandy = AssetLoader.firstCandy;
+		secondCandy = AssetLoader.secondCandy;
 		highScore = AssetLoader.highScore;
 		scoreboard = AssetLoader.scoreboard;
 		retry = AssetLoader.retry;
@@ -121,15 +129,34 @@ public class GameRenderer {
 		batcher.draw(skullDown, pipe1.getX() - 1,
 				pipe1.getY() + pipe1.getHeight() + 45, 24, 14);
 
-//		batcher.draw(skullUp, pipe2.getX() - 1,
-//				pipe2.getY() + pipe2.getHeight() - 14, 24, 14);
-//		batcher.draw(skullDown, pipe2.getX() - 1,
-//				pipe2.getY() + pipe2.getHeight() + 45, 24, 14);
+		// batcher.draw(skullUp, pipe2.getX() - 1,
+		// pipe2.getY() + pipe2.getHeight() - 14, 24, 14);
+		// batcher.draw(skullDown, pipe2.getX() - 1,
+		// pipe2.getY() + pipe2.getHeight() + 45, 24, 14);
 
 		batcher.draw(skullUp, pipe3.getX() - 1,
 				pipe3.getY() + pipe3.getHeight() - 14, 24, 14);
 		batcher.draw(skullDown, pipe3.getX() - 1,
 				pipe3.getY() + pipe3.getHeight() + 45, 24, 14);
+	}
+
+	private void drawCandy() {
+
+		// batcher.draw(candy1, candy.getX() - 1,
+		// candy.getY() + candy.getHeight(), 0, 0);
+
+		// Draw the first candy
+		batcher.draw(firstCandy, candy1.getBoundingCircle().x,
+				candy1.getBoundingCircle().y,
+				candy1.getBoundingCircle().radius * 2,
+				candy1.getBoundingCircle().radius * 2);
+
+		// Draw the second candy
+		batcher.draw(secondCandy, candy2.getBoundingCircle().x,
+				candy2.getBoundingCircle().y,
+				candy2.getBoundingCircle().radius * 2,
+				candy2.getBoundingCircle().radius * 2);
+
 	}
 
 	private void drawPipes() {
@@ -278,6 +305,7 @@ public class GameRenderer {
 		drawSkulls();
 
 		if (myWorld.isRunning()) {
+
 			drawBird(runTime);
 			drawScore();
 		} else if (myWorld.isReady()) {
@@ -301,6 +329,10 @@ public class GameRenderer {
 		drawGrass();
 
 		batcher.end();
+		batcher.begin();
+		drawCandy();
+		batcher.end();
+
 		drawTransition(delta);
 
 	}

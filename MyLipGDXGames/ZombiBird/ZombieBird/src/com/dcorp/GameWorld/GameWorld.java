@@ -69,6 +69,9 @@ public class GameWorld {
 			renderer.prepareTransition(255, 255, 255, .3f);
 
 			AssetLoader.fall.play();
+		} else if (scroller.collectBonus(bird) && bird.isAlive()) {
+			// TODO add logic to hide candy
+//			AssetLoader.coin.play();
 		}
 
 		if (Intersector.overlaps(bird.getBoundingCircle(), ground)) {

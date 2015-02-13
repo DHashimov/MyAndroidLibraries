@@ -14,7 +14,8 @@ public class AssetLoader {
 	public static Texture texture, logoTexture;
 	public static TextureRegion logo, zbLogo, bg, grass, bird, birdDown,
 			birdUp, skullUp, skullDown, bar, playButtonUp, playButtonDown,
-			ready, gameOver, highScore, scoreboard, star, noStar, retry;
+			ready, gameOver, highScore, scoreboard, star, noStar, retry,
+			firstCandy, secondCandy;
 	public static Animation birdAnimation;
 	public static Sound dead, flap, coin, fall;
 	public static BitmapFont font, shadow, whiteFont;
@@ -40,7 +41,7 @@ public class AssetLoader {
 
 		retry = new TextureRegion(texture, 59, 110, 33, 7);
 		retry.flip(false, true);
-		
+
 		gameOver = new TextureRegion(texture, 59, 92, 46, 7);
 		gameOver.flip(false, true);
 
@@ -73,6 +74,12 @@ public class AssetLoader {
 
 		birdUp = new TextureRegion(texture, 170, 0, 17, 12);
 		birdUp.flip(false, true);
+
+		firstCandy = new TextureRegion(texture, 153, 0, 17, 12);
+		firstCandy.flip(false, true);
+
+		secondCandy = new TextureRegion(texture, 153, 0, 17, 12);
+		secondCandy.flip(false, true);
 
 		TextureRegion[] birds = { birdDown, bird, birdUp };
 		birdAnimation = new Animation(0.06f, birds);

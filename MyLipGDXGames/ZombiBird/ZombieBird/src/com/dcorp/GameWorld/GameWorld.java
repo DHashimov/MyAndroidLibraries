@@ -15,7 +15,7 @@ public class GameWorld {
 	private float runTime = 0;
 	private int midPointY;
 	private GameRenderer renderer;
-	
+
 	private GameState currentState;
 
 	public enum GameState {
